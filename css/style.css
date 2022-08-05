@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #3d405b;
+  --primary-color-light: #696e9c;
+  --secondary-color: #e07a5f;
+  --transition: .6s ease-in;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 1rem;
+}
+
+i {
+  color: var(--secondary-color);
+  font-size: 3rem;
+}
+i:hover {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  gap: 1rem;
+  border: 2px solid var(--primary-color);
+  transition: var(--transition);
+}
+form.show {
+  border: 2px solid var(--secondary-color);
+}
+form.show input {
+  max-width: 16rem;
+  width: 100%;
+}
+form input {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  caret-color: var(--secondary-color);
+  color: var(--secondary-color);
+  width: 0%;
+  transition: var(--transition);
+}
+form input::placeholder {
+  color: var(--secondary-color);
+  opacity: 0.35;
+}
+form input::selection {
+  background-color: var(--primary-color-light);
+}
+form input:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=style.css.map */
